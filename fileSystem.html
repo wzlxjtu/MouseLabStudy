@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>File System</title>
+  
+  <link rel="stylesheet" href="styles/jquery-ui.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/jquery-1.12.4.js"></script>
+  <script src="scripts/jquery-ui.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="scripts/mouseTask.js"></script>
+  
+</head>
+<body>
+  
+  
+  <div id='taskContainer'>
+    <div id='sourceContainer'></div>
+    <div id='targetContainer'>
+      <div id="BLUE" class="ui-widget-header"><span><img class="folderIcon" src="resources/folderIcon.png"> BLUE</span></div>
+      <div id="GREEN" class="ui-widget-header"><span><img class="folderIcon" src="resources/folderIcon.png"> GREEN</span></div>
+      <div id="ORANGE" class="ui-widget-header"><span><img class="folderIcon" src="resources/folderIcon.png"> ORANGE</span></div>
+      <div id="PURPLE" class="ui-widget-header"><span><img class="folderIcon" src="resources/folderIcon.png"> PURPLE</span></div>
+      <div id="RED" class="ui-widget-header"><span><img class="folderIcon" src="resources/folderIcon.png"> RED</span></div>
+      <div id="YELLOW" class="ui-widget-header"><span><img class="folderIcon" src="resources/folderIcon.png"> YELLOW</span></div>
+    </div>
+  </div>
+  
+  <div id='instructionContainer'>
+    <p>Double-click the .jpg files to open the images,<br>then drag the images to the correct folder.
+	<br>Complete 50 images correctly.</p>
+  </div>
+  <div id='performanceContainer'>
+      #Correct: <span id='correct' class='performanceNumber'>0</span><br>
+      #Wrong: <span id='wrong' class='performanceNumber'>0</span><br>
+      #Total: <span id='total' class='performanceNumber'>0</span><br>
+  </div>
+  
+  <!-- The Modal -->
+  <div class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p class="option">Choose <span id="option"></span></p>
+      <p class="target"></p>
+    </div>
+  </div>
+    
+  <div id='mouseInfo' visibility="hidden"></div>
+  
+  <audio id="alarm" src="resources/fail.wav" preload="auto"></audio>
+  
+</body>
+</html>
